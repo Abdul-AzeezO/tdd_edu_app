@@ -1,0 +1,6 @@
+{
+    "assets": {
+        "output-path": "lib/core/res",
+        "filename": "assets.dart"
+    }
+}
