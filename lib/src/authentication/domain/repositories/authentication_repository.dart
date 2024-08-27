@@ -18,6 +18,6 @@ abstract class AuthenticationRepository {
   ResultFuture<void> forgotPassword(String email);
   ResultFuture<void> updateUser({
     required UpdateUserAction action,
-    dynamic userData,
+    required dynamic userData,
   });
 }

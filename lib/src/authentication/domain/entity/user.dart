@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 
 class User extends Equatable {
@@ -5,32 +6,21 @@ class User extends Equatable {
     required this.uid,
     required this.email,
     required this.fullName,
-    required this.groupIds,
-    required this.enrolledCourseIds,
-    required this.following,
-    required this.followers,
     required this.points,
-    this.image,
+    this.avatar,
     this.bio,
+    this.groupIds = const [],
+    this.enrolledCourseIds = const [],
+    this.following = const [],
+    this.followers = const [],
   });
 
   const User.empty()
-      : this(
-          uid: '',
-          email: '',
-          fullName: '',
-          image: '',
-          points: 0,
-          bio: '',
-          groupIds: const [],
-          enrolledCourseIds: const [],
-          followers: const [],
-          following: const [],
-        );
+      : this(uid: '', email: '', fullName: '', avatar: '', points: 0, bio: '');
 
   final String uid;
   final String email;
-  final String? image;
+  final String? avatar;
   final String? bio;
   final String fullName;
   final int points;
